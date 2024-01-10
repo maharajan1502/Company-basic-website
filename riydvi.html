@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyadvi Technologies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: rgb(15, 131, 255);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-style: oblique;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+            font-weight: 700;
+            position: sticky;
+            top: 0px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            margin-right: 60px;
+        }
+
+        section {
+            padding: 20px;
+           
+        }
+
+        form {
+            width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+         section .he{
+            text-align: center;
+            color: red;
+        }
+        section hr{
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 30px;
+
+        }
+        .home{
+            display: flex;
+            max-height: 100vh;
+            margin: 10px 70px;
+            padding: 50px;
+            margin-left: 150px;
+
+        }
+        .hleft{
+            
+            width: 50%;
+        }
+        .hleft h2{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blue;
+            font-size: 30px;
+            font-weight: 900;
+            transition:0.6s;
+        }
+        .hleft button{
+            border-radius: 30px;
+            font-weight: 700;
+            background-color: blueviolet;
+            margin-left: 50px;
+        }
+         .hleft button:hover{
+            background-color: red;
+            transition: 0.6s;
+        }
+        .hright{
+            width: 60%; 
+            display: flex;
+            flex-direction: column;
+            margin-right: 100px;
+    
+
+        }
+        .hright p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .about{
+            width: 90%;
+            max-height: 100vh; ;
+            margin: auto;
+            display: flex;
+        }
+        .aleft p{
+            margin-left: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: lighter;
+
+        }
+        .aright p{
+            margin-top: 58px;
+            margin-left: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+        .service{
+           
+            width: 90%;
+            margin: auto;
+        }
+        .service ul{ 
+            margin-top: 30px;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            justify-content: center;
+        } 
+        .service ul li{
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 10px 20px;
+            border: 1px solid brown;
+            background-color: #333;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+
+        }
+        .service ul li:hover{
+            background-color: cornflowerblue;
+            color: black;
+            transform: scale(1.1);
+            transition: 0.6s;
+        }
+        .blog{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+        }
+        .blog article{
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgb(208, 204, 204);
+            color:black;
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+            
+        }
+        section .rm{
+            text-align: center;
+            margin-top: 15px;
+        }
+        .blog article:hover{
+            transform: scale(1.05);
+            transition: 0.6s;
+        }
+        form{
+            border: 1px solid black;
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            background-color: bisque;
+
+        }
+        form button{
+            margin-left: 40%;
+            padding: 10px 40px;
+            font-weight: 800;
+            
+            
+        }
+        form button:hover{
+            background-color: brown;
+            transition: 0.5s;
+            border: 1.5px solid black;
+        }
+        .details ul{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            margin: 0px 30%;
+        }
+        .details ul li{
+            list-style-type: none;
+            font-weight: 600;;
+            border:1px solid black;
+            width: 400px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: rgb(185, 185, 185);
+
+        }
+        .details ul li a{
+            color: black;
+        }
+
+@keyframes article {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Riyadvi Technologies</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#contactus">ContactUs</a>
+    </nav>
+
+    <section id="home"><h2 class="he">Welcome To Software World <hr></h2>
+        <div class="home">
+        <div class="hleft">
+        <h2>WE CONNECTING</h2>
+        <H2>BUSSINESS AND</H2>
+        <H2>DEVELOPMENT</H2>
+        <button>CONNECT US</button></div>
+        <div class="hright">
+         <p>
+        At Riyadvi Technologies, 
+        Our commitment is to provide quality products and service. that solve the problems of our clients.
+    </p>
+
+    <p>
+        Whether you're looking for app development or simply exploring to see what we offer, 
+        we're delighted to have you here. Feel free to browse through our website and discover how <b>Riyadvi Technologies</b>  can make a difference for you.
+    </p>
+
+    <p>Thank you for choosing Riyadvi Technologies. We look forward to serving you!</p></div>
+    </div>
+    </section>
+
+    <section id="about"><h2 class="he">About Us <hr></h2>
+        <div class="about">
+        <div class="aleft">
+        <h3>About Riyadvi</h3>
+        <p>Founded in 2021. About Riyadvi Software Technologies Pvt.Ltd is located in Chennai City of India. 
+            Specifically, We are a bunch of folks who believe in the idea of evocative storytelling. And also,
+             Our team uses the visual medium to create lasting impressions. With no detail too small, no challenge
+              too big and we truly believe in the marriage of production and design.
+        </p>
+    </div>
+        <div class="aright"><p>
+            Moreover, Riyadvi specialized in App Development, Web Development, Game Development, VR/AR, 
+            Mixed Reality, 3D-Development, Digital Marketing, and Business Intelligence. In addition, Quality 
+            and Innovation are at the heart of What we do. Moreover, we look forward to working with you and proving 
+            our skills to the client’s satisfaction.
+        </p></div></div>
+    </section>
+
+    <section id="services">
+        <h2 class="he">Our Services <hr></h2>
+        <div class="service">
+        <ul>
+            <li>Consulting Services</li>
+            <li>Enterprise Solution</li>
+            <li>Web Applications</li>
+            <li>Mobile Applications</li>
+            <li>Digital Marketing</li>
+            <li>Cyber Security</li>
+        </ul></div>
+    </section>
+
+    <section id="blog"><h2 class="he">Blog <hr></h2> 
+        <b><h2 class="rm">Latest Articles</h2>
+    </b>
+    <div class="blog">
+        <div class="blog1">
+        
+        </div>
+   <article>
+        <h3>Mobile Application</h3>
+        <p>
+            In the ever-evolving landscape of [your industry], staying abreast of the latest trends is crucial. 
+            Our latest blog post explores the impact of [specific trend] on [your niche] and how businesses can adapt to thrive in this dynamic environment.
+        </p>
+        <a href="#blog-post-1">Read More</a>
+    </article>
+
+    <article>
+        <h3>Web Application</h3>
+        <p>
+            Brief description of the content of the second blog post. 
+            Learn how something interesting or valuable can benefit your audience or industry.
+        </p>
+        <a href="#blog-post-2">Read More</a>
+    </article>
+     <article>
+        <h3>cyber security</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Aliquam officia excepturi doloribus amet quo molestiae, id maiores laborum quis
+              ea dolor libero qui quam deserunt earum quibusdam impedit doloremque. Quasi.
+        </p>
+        <a  href="#blog-post-2">Read More</a>
+    </article>
+
+    <!-- Add more articles as needed -->
+
+   
+</div>
+<div class="rm">
+ <a href="#all-posts">View All Articles</a>
+</section></div>
+<section id="contact">
+    <h2 class="he">Contact Details <hr></h2>
+    <div class="details">
+  
+        <ul>
+            <li>Phone : <a href="tel:+919698531624">9698531624</a></li>
+            <li>Email : <a href="mailto:mmraja1502@gmail.com">mmraja1502@gmail.com</a></li>
+            <li>Place : Coimbatore</li>
+            <li>Available time : sunday to friday, 9AM to 6PM</li>
+        </ul>
+    </div>
+</section>
+    <section id="contactus">
+      <h2 class="he">Contact Us <hr></h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="2" required></textarea>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <label for="contact-time">Preferred Contact Time:</label>
+            <input type="datetime-local" id="contact-time" name="contact-time">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
